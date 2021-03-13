@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    <h1>
+        {{ title }}
+    </h1>
+
+
+    <form method="post">
+        <div>
+            <div class="mainLabel">
+                <label for="symbolsNum"> Type number of symbols</label>
+            </div>
+            <input id="symbolsNum" name="symbolsNum" type="number" min="1" max="56" value="{{ symbolsNum ?? '8' }}" required/>
+        </div>
+        <div class="checkboxes">
+            <input name="numbers" type="checkbox" value="1"/>
+            <label class="choice" for="numbers">Numbers without 0 and 1</label><br>
+            <input name="uppercase" type="checkbox" value="1"/>
+            <label class="choice" for="uppercase">Big letters without O and I</label><br>
+            <input name="lowercase" type="checkbox" value="1"/>
+            <label class="choice" for="lowercase">Small letters without o and l</label><br>
+        </div>
+
+        <input type="submit" name="submit" class="mainButton" value="Generate"/>
+    </form>
+
+
+    {% if (result is defined) and (result is not empty) %}
+
+        <h1 style="font-weight: bolder"> {{ result }}</h1>
+        <span>Password generated!</span>
+
+    {% endif %}
+
+
+{% endblock %}

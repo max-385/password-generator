@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+}
+
+form {
+    display: inline-block;
+    border: 1px solid;
+    padding: 5px;
+}
+
+.checkboxes {
+    text-align: left;
+}
+
+.mainLabel {
+    background: gray;
+    margin-bottom: 3px;
+}
+
+#symbolsNum {
+    text-align: inherit;
+    width: 30%;
+    margin-bottom: 3%;
+}
+
+.mainButton {
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+}
